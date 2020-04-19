@@ -1,13 +1,15 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Pais implements Serializable {
 
         private int id ;
         private String nome;
         private long populacao;
-        private String area;
+        private double area;
+        ArrayList<Pais> lista = new ArrayList<>();
 
 
         public Pais() {
@@ -39,10 +41,10 @@ public class Pais implements Serializable {
     }
 
     public String getArea() {
-        return area;
+        return String.valueOf(area);
     }
 
-    public void setArea(String area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 
